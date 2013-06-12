@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<legend>Login</legend>
+<form class ="form-horizontal" name="login" action="." id="login" method="POST" data-validate="parsley">
+{% csrf_token %}
+<fieldset>
+<div class="control-group">
+	<label class="control-label" for="input01">Username:</label>
+ 	<div class="controls"><input type="text" name="password" id="password" data-required="true"><br>
+	</div>
+	</div>
+
+<div class="control-group">
+	<label class="control-label" for="input01">Password:</label>
+ 	<div class="controls"><input type="password" name="password" id="password" data-required="true"><br>
+	</div>
+	</div>
+
+<div class="form-actions">
+	<button type="submit" class="btn btn-primary" value="Submit">Submit</button>
+	<button type="reset" class="btn">Reset</button>
+	</div>
+
+</fieldset>
+{% endblock %}
